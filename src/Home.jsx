@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Container,
   AppBar,
   Toolbar,
   Typography,
@@ -16,11 +15,8 @@ import {
   GitHub,
   LinkedIn,
   Email,
-  Work,
-  School,
   Home as HomeIcon,
   Code,
-  Business,
   Phone,
 } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
