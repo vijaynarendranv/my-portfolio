@@ -32,9 +32,6 @@ const Home = () => {
           <a href="https://github.com/vijaynarendranv" target="_blank" rel="noopener noreferrer" className="home__social-link">
             <i className='bx bxl-github'></i>
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer" className="home__social-link">
-            <i className='bx bxl-twitter'></i>
-          </a>
         </div>
 
         <Link to="about" smooth={true} className="home__scroll">
