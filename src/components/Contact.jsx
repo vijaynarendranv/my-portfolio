@@ -148,7 +148,7 @@ const Contact = () => {
                 id="project"
                 cols="30" 
                 rows="10" 
-                placeholder="Write your project" 
+                placeholder="Please don't propose me" 
                 className="contact__form-input"
                 value={formData.project}
                 onChange={handleChange}
