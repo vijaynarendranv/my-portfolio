@@ -27,9 +27,6 @@ const Footer = () => {
           <a href="https://github.com/vijaynarendranv" target="_blank" rel="noopener noreferrer" className="footer__social-link">
             <i className='bx bxl-github'></i>
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer" className="footer__social-link">
-            <i className='bx bxl-twitter'></i>
-          </a>
         </ul>
 
         <span className="footer__copy">

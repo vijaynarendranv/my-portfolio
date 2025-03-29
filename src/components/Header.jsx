@@ -13,7 +13,6 @@ const Header = () => {
   return (
     <header className="header" id="header">
       <nav className="nav container">
-        <a href="#" className="nav__logo">Vijay Narendran V</a>
 
         <div className="nav__menu">
           <ul className="nav__list">

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import dinedashImage from '../assets/img/dinedash.jpeg';
 import flexfitImage from '../assets/img/flexfit.png';
 import checkersImage from '../assets/img/checkers.jpeg';
-import tradersarkImage from '../assets/img/checkers.jpeg';
+import namma from '../assets/img/namma.jpeg';
 
 const Work = () => {
   const [filter, setFilter] = useState('all');
@@ -31,10 +31,10 @@ const Work = () => {
     },
     {
       id: 4,
-      title: 'Traders Ark',
+      title: 'Namma Matrimony',
       category: 'web',
-      image: tradersarkImage,
-      description: 'Automated trading web app with React.js and Node.js'
+      image: namma,
+      description: 'An React.js based site with an ML model integrated with Node.js'
     }
   ];
 
@@ -82,9 +82,7 @@ const Work = () => {
             <h3 className="work__title">{project.title}</h3>
             <p className="work__description">{project.description}</p>
 
-            <a href="#" className="work__button">
-              Demo <i className='bx bx-right-arrow-alt work__icon'></i>
-            </a>
+          
           </div>
         ))}
       </div>
