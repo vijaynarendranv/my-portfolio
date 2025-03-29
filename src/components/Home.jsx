@@ -1,4 +1,7 @@
+// components/Home.js
 import React from 'react';
+import { Link } from 'react-scroll';
+import vijayImage from '../assets/img/vijay.jpg';
 
 const Home = () => {
   return (
@@ -11,33 +14,33 @@ const Home = () => {
           <h1 className="home__name">Vijay Narendran V</h1>
           <h3 className="home__education">Full Stack Developer / Data Analyst</h3>
           <div className="home__buttons">
-            <a download="" href="/assets/pdf/2031054_VIJAY_NARENDRAN_V.pdf" className="button button--ghost">
+            <a download="" href="assets/pdf/2031054_VIJAY_NARENDRAN_V.pdf" className="button button--ghost">
               Download Resume
             </a>
-            <a href="#about" className="button">About me</a>
+            <Link to="about" smooth={true} className="button">About me</Link>
           </div>
         </div>
 
         <div className="home__handle">
-          <img src="/assets/img/vijay.jpg" alt="" className="home__img"/>
+          <img src={vijayImage} alt="Vijay Narendran" className="home__img" />
         </div>
 
         <div className="home__social">
-          <a href="https://www.linkedin.com/in/vijaynarendranv/" target="_blank" rel="noreferrer" className="home__social-link">
+          <a href="https://www.linkedin.com/in/vijaynarendranv/" target="_blank" rel="noopener noreferrer" className="home__social-link">
             <i className='bx bxl-linkedin-square'></i>
           </a>
-          <a href="https://github.com/vijaynarendranv" target="_blank" rel="noreferrer" className="home__social-link">
+          <a href="https://github.com/vijaynarendranv" target="_blank" rel="noopener noreferrer" className="home__social-link">
             <i className='bx bxl-github'></i>
           </a>
-          <a href="" target="_blank" rel="noreferrer" className="home__social-link">
+          <a href="" target="_blank" rel="noopener noreferrer" className="home__social-link">
             <i className='bx bxl-twitter'></i>
           </a>
         </div>
 
-        <a href="#about" className="home__scroll">
+        <Link to="about" smooth={true} className="home__scroll">
           <i className='bx bx-mouse home__scroll-icon'></i>
           <span className="home__scroll-name">Scroll Down</span>
-        </a>
+        </Link>
       </div>
     </section>
   );

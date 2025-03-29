@@ -1,4 +1,6 @@
+// components/Footer.js
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
@@ -8,24 +10,24 @@ const Footer = () => {
 
         <ul className="footer__list">
           <li>
-            <a href="#about" className="footer__link">About</a>
+            <Link to="about" smooth={true} className="footer__link">About</Link>
           </li>
           <li>
-            <a href="#skills" className="footer__link">Skills</a>
+            <Link to="skills" smooth={true} className="footer__link">Skills</Link>
           </li>
           <li>
-            <a href="#work" className="footer__link">Projects</a>
+            <Link to="work" smooth={true} className="footer__link">Projects</Link>
           </li>
         </ul>
 
         <ul className="footer__social">
-          <a href="https://www.linkedin.com/in/vijaynarendranv" target="_blank" rel="noreferrer" className="footer__social-link">
+          <a href="https://www.linkedin.com/in/vijaynarendranv" target="_blank" rel="noopener noreferrer" className="footer__social-link">
             <i className='bx bxl-linkedin'></i>
           </a>
-          <a href="https://github.com/vijaynarendranv" target="_blank" rel="noreferrer" className="footer__social-link">
+          <a href="https://github.com/vijaynarendranv" target="_blank" rel="noopener noreferrer" className="footer__social-link">
             <i className='bx bxl-github'></i>
           </a>
-          <a href="" target="_blank" rel="noreferrer" className="footer__social-link">
+          <a href="" target="_blank" rel="noopener noreferrer" className="footer__social-link">
             <i className='bx bxl-twitter'></i>
           </a>
         </ul>

@@ -1,47 +1,46 @@
-import React from 'react';
+// components/Work.js
+import React, { useState } from 'react';
+import dinedashImage from '../assets/img/dinedash.jpeg';
+import flexfitImage from '../assets/img/flexfit.png';
+import checkersImage from '../assets/img/checkers.jpeg';
+import tradersarkImage from '../assets/img/checkers.jpeg';
 
 const Work = () => {
+  const [filter, setFilter] = useState('all');
   const projects = [
     {
       id: 1,
-      category: 'web',
-      image: '/assets/img/dinedash.jpg',
       title: 'Dine Dash',
+      category: 'web',
+      image: dinedashImage,
       description: 'Food ordering app with Node.js backend and React.js frontend'
     },
     {
       id: 2,
-      category: 'mobile',
-      image: '/assets/img/flexfit.jpg',
       title: 'Flex Fit',
+      category: 'mobile',
+      image: flexfitImage,
       description: 'Fitness app with OpenAI integration for personalized recommendations'
     },
     {
       id: 3,
-      category: 'game',
-      image: '/assets/img/checkers.jpg',
       title: 'Checkers Multiplayer',
+      category: 'game',
+      image: checkersImage,
       description: 'Real-time multiplayer game with WebSockets'
     },
     {
       id: 4,
-      category: 'web',
-      image: '/assets/img/tradersark.jpg',
       title: 'Traders Ark',
+      category: 'web',
+      image: tradersarkImage,
       description: 'Automated trading web app with React.js and Node.js'
     }
   ];
 
-  const [filter, setFilter] = React.useState('all');
-  const [projectsToShow, setProjectsToShow] = React.useState(projects);
-
-  React.useEffect(() => {
-    if (filter === 'all') {
-      setProjectsToShow(projects);
-    } else {
-      setProjectsToShow(projects.filter(project => project.category === filter));
-    }
-  }, [filter]);
+  const filteredProjects = filter === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === filter);
 
   return (
     <section className="work section" id="work">
@@ -76,9 +75,9 @@ const Work = () => {
       </div>
 
       <div className="work__container container grid">
-        {projectsToShow.map((project) => (
+        {filteredProjects.map(project => (
           <div className={`work__card mix ${project.category}`} key={project.id}>
-            <img src={project.image} alt="" className="work__img"/>   
+            <img src={project.image} alt={project.title} className="work__img" />   
           
             <h3 className="work__title">{project.title}</h3>
             <p className="work__description">{project.description}</p>
