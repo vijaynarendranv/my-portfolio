@@ -8,10 +8,15 @@ import Services from './components/Services';
 import Work from './components/Work';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <div className="App">
+       <Helmet>
+        <title>Vijay Narendran V | Portfolio</title>
+        <meta name="description" content="Full Stack Developer and Data Analyst Portfolio" />
+      </Helmet>
       <Header />
       <main className="main">
         <Home />
