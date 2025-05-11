@@ -54,7 +54,7 @@ const Contact = () => {
       <span className="section__subtitle">Get in touch</span>
       <h2 className="section__title">Contact Me</h2>
 
-      <div className="contact__container container grid">
+     
         <div className="contact__content">
           <h3 className="contact__title">Talk to me</h3>
 
@@ -92,80 +92,9 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <br/><br/>
 
-        <div className="contact__content">
-          <h3 className="contact__title">Write me something</h3>
-
-          {message.text && (
-            <div className={`contact__message contact__message--${message.type}`}>
-              {message.text}
-            </div>
-          )}
-
-          <form 
-            name="contact" 
-            method="POST" 
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-            className="contact__form"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="bot-field" />
-            
-            <div className="contact__form-div">
-              <label htmlFor="name" className="contact__form-tag">Name</label>
-              <input 
-                type="text" 
-                name="name" 
-                id="name"
-                placeholder="Insert Your Name" 
-                className="contact__form-input"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="contact__form-div">
-              <label htmlFor="email" className="contact__form-tag">Mail</label>
-              <input 
-                type="email" 
-                name="email" 
-                id="email"
-                placeholder="Insert Your email" 
-                className="contact__form-input"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="contact__form-div contact__form-area">
-              <label htmlFor="project" className="contact__form-tag">Narration</label>
-              <textarea 
-                name="project" 
-                id="project"
-                cols="30" 
-                rows="10" 
-                placeholder="Got something for me?" 
-                className="contact__form-input"
-                value={formData.project}
-                onChange={handleChange}
-                required
-              ></textarea>
-            </div>
-
-            <button 
-              type="submit" 
-              className="button"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
-        </div>
-      </div>
+     
     </section>
   );
 };

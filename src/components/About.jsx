@@ -1,6 +1,6 @@
 // components/About.js
 import React from 'react';
-import vijayRearImage from '../assets/img/vijay rear.jpg';
+import vijayRearImage from '../assets/img/vijay LinkedInPic.jpg';
 
 const About = () => {
   return (
