@@ -7,16 +7,8 @@ const Contact = () => {
     email: '',
     project: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState({ text: '', type: '' });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+
 
   const encode = (data) => {
     return Object.keys(data)
@@ -24,30 +16,6 @@ const Contact = () => {
       .join('&');
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'contact',
-        ...formData
-      })
-    })
-    .then(() => {
-      setMessage({ text: 'Message sent successfully!', type: 'success' });
-      setFormData({ name: '', email: '', project: '' });
-    })
-    .catch(error => {
-      setMessage({ text: 'Failed to send message. Please try again.', type: 'error' });
-    })
-    .finally(() => {
-      setIsSubmitting(false);
-      setTimeout(() => setMessage({ text: '', type: '' }), 5000);
-    });
-  };
 
   return (
     <section className="contact section" id="contact">
