@@ -1,3 +1,15 @@
+.services__container_container_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.services__card {
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
 @media only screen and (max-width: 768px) {
     .services__container_container_grid{

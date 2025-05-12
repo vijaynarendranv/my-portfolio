@@ -1,6 +1,7 @@
 // components/Services.js
 import React, { useState } from 'react';
 import  "./css/services.css";
+import "./css/skills.css"
 const Services = () => {
   const [modalStates, setModalStates] = useState({
     fullstack: false,
