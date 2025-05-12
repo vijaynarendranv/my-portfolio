@@ -1,0 +1,8 @@
+
+
+@media only screen and (max-width: 768px) {
+    .skills section{
+        display:flex;
+        flex-direction:column;
+    }
+}

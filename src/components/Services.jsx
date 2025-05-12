@@ -1,6 +1,6 @@
 // components/Services.js
 import React, { useState } from 'react';
-
+import  "./css/services.css";
 const Services = () => {
   const [modalStates, setModalStates] = useState({
     fullstack: false,
@@ -20,7 +20,7 @@ const Services = () => {
       <span className="section__subtitle">What I Do</span>
       <h2 className="section__title">My Services</h2>
 
-      <div className="services__container container grid">
+      <div className="services__container_container_grid">
         {/* Full Stack Development Card */}
         <div className="services__card">
           <h3 className="services__title">Full Stack<br /> Development</h3>

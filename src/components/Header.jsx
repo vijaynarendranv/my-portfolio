@@ -1,6 +1,7 @@
 // components/Header.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import './css/header.css'
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
