@@ -2,21 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./css/header.css";
-import { ToastContainer, toast } from "react-toastify";
 
 const Header = () => {
-  const [theme, setTheme] = useState("dark");
   const [activeSection, setActiveSection] = useState("home");
 
-  const toggleTheme = () => {
-    if (theme === "dark") {
-      toast("Working on the theme fix, will get it ready within 18.05.2025", {
-        autoclose: 200,
-      });
-    }
-    setTheme(theme === "light" ? "dark" : "light");
-    document.body.classList.toggle('dark-theme');
-  };
 
   useEffect(() => {
     document.body.classList.add("dark-theme");
@@ -48,7 +37,6 @@ const Header = () => {
 
   return (
     <header className="header" id="header">
-      <ToastContainer />
       <nav className="nav container">
         <div className="nav__menu">
           <ul className="nav__list">
@@ -111,13 +99,7 @@ const Header = () => {
         </div>
 
         {/* Theme change button */}
-        <i
-          className={`bx ${
-            theme === "light" ? "bx-moon" : "bx-sun"
-          } change-theme`}
-          id="theme-button"
-          onClick={toggleTheme}
-        ></i>
+       
       </nav>
     </header>
   );
