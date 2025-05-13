@@ -10,11 +10,10 @@ const Contact = () => {
 
   return (
     <section className="contact section" id="contact">
-     
+      <h2 className="section__title">Reach me at</h2>
 
      
         <div className="contact__content">
-          <h3 className="contact__title">Reach me at</h3>
 
           <div className="contact__info">
             <div className="contact__card">
